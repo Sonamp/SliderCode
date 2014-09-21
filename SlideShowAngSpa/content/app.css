@@ -1,0 +1,12 @@
+*{
+font-family: 'Open Sans', sans-serif;
+}
+.center-grey{
+       background:#f2f2f2;
+}
+ .thumb {
+            float:left;
+            display:inline-block;
+            border:5px solid #808080;
+            margin:8px;
+        }

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Image Gallery</title>    
+</head>
+
+
+<body>
+    <link rel="stylesheet" href="content/colorbox.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="scripts/jquery.colorbox.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/slideController.js"></script>
+    <script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
+    <link href="content/app.css" rel="stylesheet" />
+
+
+    <div class="wrap" style="width:100%">
+        <div ng-controller='slideController' style="width:100%">
+            <div>
+                <!--User can see all the image and can start slide show on full browser mode clicking on any image-->
+                <div ng-repeat="image in images" class="thumb">
+                    <!--apply-color-box directive is to display images in slider mode-->
+                    <a href='{{image.path}}' class="group1" title='{{image.alttext}}' apply-color-box>
+                        <!--Inline all the images as thumbnail-->
+                        <img ng-src='{{image.path}}' style="width:200px;height:150px;" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
