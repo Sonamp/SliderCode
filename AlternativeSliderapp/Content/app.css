@@ -1,0 +1,141 @@
+﻿*{
+font-family: 'Open Sans', sans-serif;
+}
+.center-grey{
+       background:#f2f2f2;
+}
+
+.slider {
+    border: 15px solid #FFFFFF;
+    border-radius: 5px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*.slide img{
+position: relative;
+	-webkit-transform: translate3d(0,0,0)
+	-moz-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+}*/
+/*.slide img {
+  position:absolute;
+  top:50%;
+  left:50%;
+  overflow:hidden;
+  opacity:1;
+  transition-property: opacity, transform;
+  transition-duration: 3s, 8s;
+}*/
+
+
+.slide .caption 
+{ 
+    position: absolute; 
+    bottom:80px;
+    left: 5px; 
+    color: White; 
+    font-size: 30px;
+    text-align:left; 
+    font-weight:bold; 
+    opacity:0.9; 
+
+} 
+.slide .index 
+{ 
+    position: absolute; 
+    height: 20px; 
+    bottom: 8px; 
+    left: 10px; 
+    color: white; 
+    font-size: 20px;
+    text-align:left; 
+    font-weight:bold; 
+    opacity:0.9; 
+
+} 
+
+.slide.ng-hide-add, .slide.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+ 
+.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
+  opacity:0;
+}
+ 
+.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+
+
+.liC
+{
+	background: #eee;
+	border-color: #ddd #bbb #aaa #ccc;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	display: inline;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	position: relative;
+}
+
+.nav {
+     bottom: -10px;
+    display: block;
+    height: 80px;
+    left: 0;
+    margin: 0 auto;
+    padding: 1em 0 0.8em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+
+.nav li {
+    border: 4px solid #AAAAAA;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    margin: 0 8px;
+    position: relative;
+    width: 100px;
+    float:left
+}
+
+.nav li.active {
+    border: 5px solid #FFFFFF;
+}
+
+.nav li img {
+    width: 100%;
+}

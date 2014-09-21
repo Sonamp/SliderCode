@@ -1,0 +1,43 @@
+﻿
+
+<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <title>Image</title>
+</head>
+<body>
+
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/slideController.js"></script>
+    <script src="scripts/angular-animate.min.js"></script>
+    <script src="scripts/angular-touch.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='Content/app.css' rel='stylesheet' type='text/css'>
+    <script>
+
+
+    </script>
+    <div ng-controller="slideController">        
+
+        <div class="container slider">
+            <div class="slide" ng-repeat="image in images" ng-show="isActive($index)" >
+                <img ng-src="{{image.path}}" ng-click="showNext()" ng-swipe-left="showNext()" />
+                <div class="caption">{{image.alttext}}</div>
+                <div class="index">{{$index+1}}/{{total}}</div>
+            </div>
+                       
+
+            <ul class="nav">
+                <li ng-repeat="image in images" ng-class="{'active':isActive($index)}">
+                    <img src="{{image.path}}" title="{{image.title}}" ng-click="showPhoto($index);" />
+                </li>
+            </ul>
+        </div>
+
+       
+    </div>
+</body>
+</html>
+
